@@ -12,7 +12,7 @@ three vertices.
 -/
 theorem jsp_000849 {V : Type*} [Fintype V]
     [Nonempty V] (G : SimpleGraph V) [DecidableRel G.Adj]
-    (hE : #G.edgeFinset = problemThreshold (Fintype.card V)) :
+    (hE : G.edgeFinset.card = problemThreshold (Fintype.card V)) :
     ContainsSaturatedPlanarBeyondTriangle G :=
   erdos_1019 G hE
 
